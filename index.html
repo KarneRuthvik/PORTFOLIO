@@ -278,49 +278,40 @@
         }
 
         .project-card {
-            position: relative;
+            background-color: var(--light-navy);
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: var(--transition);
-        }
-
-        .project-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-            transition: var(--transition);
-        }
-
-        .project-info {
             padding: 20px;
-            background-color: var(--navy);
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .project-title {
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .project-image img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .project-content {
+            margin-top: 15px;
+        }
+
+        .project-content h3 {
             color: var(--white);
             margin-bottom: 10px;
         }
 
-        .project-desc {
+        .project-content p {
             color: var(--slate);
-            font-size: 0.9rem;
+            margin-bottom: 15px;
         }
 
-        .project-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(10, 25, 47, 0.9);
+        .project-links {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: var(--transition);
+            gap: 10px;
         }
 
         .project-card:hover .project-overlay {
